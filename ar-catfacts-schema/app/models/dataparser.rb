@@ -6,7 +6,7 @@ class CSVParser
 	end
 
 	def self.convert_to_array_of_hashes(array_of_emails)
-		array_of_emails.map! {|emails| {:name => emails[0], :email => emails[1].strip}}
+		array_of_emails.map! {|emails| {:first_name => emails[0], :email => emails[1].strip}}
 	end
 end
 
