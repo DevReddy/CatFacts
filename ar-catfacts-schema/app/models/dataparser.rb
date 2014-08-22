@@ -1,6 +1,6 @@
 require 'csv'
 
-class CSVParser 
+class CSVParser
 	def self.parse_csv(filename)
 		@array_of_emails = CSV.open(filename).readlines
 	end

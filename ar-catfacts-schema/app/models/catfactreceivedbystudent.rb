@@ -1,6 +1,6 @@
 require_relative '../../db/config'
 
-class CatfactReceivedByStudent < ActiveRecord::Base
+class Catfactreceivedbystudent < ActiveRecord::Base
 
 	belongs_to :catfact
 	belongs_to :student

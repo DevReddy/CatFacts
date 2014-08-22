@@ -51,6 +51,12 @@ task "console" do
   exec "irb -r./db/config"
 end
 
+desc 'Start spamming cohort with cat facts.'
+task "db:spam" do
+  puts "Starting Cat Fact spam!"
+  exec 'ruby ./app/controller/cat_fact_mailer.rb'
+end
+
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:specs)
 
