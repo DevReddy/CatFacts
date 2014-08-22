@@ -42,6 +42,13 @@ task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
 end
 
+
+desc 'Start IRB with application environment loaded'
+task "console" do
+  exec "irb -r./config/application"
+end
+
+
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:specs)
 
