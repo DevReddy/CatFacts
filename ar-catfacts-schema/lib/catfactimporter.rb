@@ -1,0 +1,6 @@
+class CatFactImporter
+
+
+
+
+end

@@ -6,12 +6,12 @@ require_relative 'db/config'
 
 desc "create the database"
 task "db:create" do
-  # touch 'db/ar-students_and_teachers.sqlite3'
+   touch 'db/catfacts.sqlite3'
 end
 
 desc "drop the database"
 task "db:drop" do
-  # rm_f 'db/ar-students_and_teachers.sqlite3'
+   rm_f 'db/catfacts.sqlite3'
 end
 
 desc "migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)."
@@ -23,10 +23,10 @@ task "db:migrate" do
   end
 end
 
-desc "populate the student database with sample data"
+desc "populate the catfacts database with catfacts AND populate the student database with student data"
 task "db:populate" do
-  # StudentsImporter.import
-  # TeacherImporter.import
+   StudentsImporter.import
+   CatFactImporter.import
 end
 
 desc "rollback your migration--use STEPS=number to step back multiple times"
