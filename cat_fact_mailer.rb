@@ -17,13 +17,15 @@ end
 # AUTOMATE EVERYTHING BELOW THIS LINE
 
 name = 'Cat Facts'
-email = 'catfactsarethebestest@gmail.com'
-cat_fact = 'Cats are actually not dogs!'
+recipient = 'ghammell1@gmail.com'
+cat_fact = 'Did you know... Approximately 40,000 people are bitten by cats in the U.S. annually!'
+
+picture = ["cat", "cat2", "kitten", "kitten2", "kitten3"].sample
 
 Mail.deliver do
-       to "#{email}"
+       to "#{recipient}"
      from 'catfactsarethebestest@gmail.com'
   subject "Hey #{name}, here's your Cat Fact!"
      body "#{cat_fact}"
-     add_file "./cat.png"
+     add_file "./images/#{picture}.jpg"
 end
