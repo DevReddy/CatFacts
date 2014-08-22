@@ -4,8 +4,7 @@ class CreateCatfacts < ActiveRecord::Migration
 
 	def change
 		create_table :catfacts do |column|
-			column.string :catfacts
-
+			column.string :catfact 
 			column.timestamps
 		end
 	end
