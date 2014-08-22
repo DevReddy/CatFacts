@@ -19,6 +19,10 @@ end
 
 Catfact.count.times do
   rand_stud_id = rand(Student.count)
+  while rand_stud_id <= 0 || rand_stud_id > Student.count
+    rand_stud_id = rand(Student.count)
+  end
+
   name = Student.find_by(id: rand_stud_id).first_name       #Get random student
   recipient = Student.find_by(id: rand_stud_id).email
 
