@@ -27,6 +27,9 @@ Catfact.count.times do
   recipient = Student.find_by(id: rand_stud_id).email
 
   rand_fact_id = rand(Catfact.count)
+  while rand_fact_id <= 0 || rand_fact_id > Catfact.count
+    rand_fact_id = rand(Catfact.count)
+  end
   cat_fact = Catfact.find_by(id: rand_fact_id).catfact #Get random fact
 
   picture = ["cat.jpg", "cat2.jpg", "kitten.jpg", "kitten2.jpg", "kitten3.jpg", "kitten.gif"].sample
