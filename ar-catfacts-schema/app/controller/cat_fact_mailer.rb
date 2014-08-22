@@ -40,7 +40,7 @@ Catfact.count.times do
 
     Student.find_by(id:rand_stud_id).catfactreceivedbystudents.create(catfact_id:rand_fact_id, student_id:rand_stud_id) # Create link btwn fact and student
 
-    puts "Sending mail to #{name} (#{recipient})!"
+    puts "Sending fact #{rand_fact_id} to #{name} (#{recipient})!"
 
     Mail.deliver do
            to "#{recipient}"
@@ -49,10 +49,11 @@ Catfact.count.times do
          body "#{cat_fact}"
          add_file "./db/data/images/#{picture}"
     end
+    # Muledeers, mule.deer.2014@devbootcamp.com
 
     puts "Sent!"
 
   end
 
-  sleep(10)
+  sleep(7)
 end
