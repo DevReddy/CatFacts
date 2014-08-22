@@ -18,17 +18,17 @@ end
 # AUTOMATE EVERYTHING BELOW THIS LINE
 
 Catfact.count.times do
-  rand_stud_id = rand(Student.count)
+  rand_stud_id = rand(Student.count + 1)
   while rand_stud_id <= 0 || rand_stud_id > Student.count
-    rand_stud_id = rand(Student.count)
+    rand_stud_id = rand(Student.count + 1)
   end
 
   name = Student.find_by(id: rand_stud_id).first_name       #Get random student
   recipient = Student.find_by(id: rand_stud_id).email
 
-  rand_fact_id = rand(Catfact.count)
+  rand_fact_id = rand(Catfact.count + 1)
   while rand_fact_id <= 0 || rand_fact_id > Catfact.count
-    rand_fact_id = rand(Catfact.count)
+    rand_fact_id = rand(Catfact.count + 1)
   end
   cat_fact = Catfact.find_by(id: rand_fact_id).catfact #Get random fact
 
