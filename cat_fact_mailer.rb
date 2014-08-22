@@ -16,9 +16,9 @@ end
 
 # AUTOMATE EVERYTHING BELOW THIS LINE
 
-name = 'Cat Facts'
-recipient = 'ghammell1@gmail.com'
-cat_fact = 'Did you know... Approximately 40,000 people are bitten by cats in the U.S. annually!'
+name = ''
+recipient = ''
+cat_fact = ''
 
 picture = ["cat", "cat2", "kitten", "kitten2", "kitten3"].sample
 
