@@ -57,6 +57,12 @@ task "db:spam" do
   exec 'ruby ./app/controller/cat_fact_mailer.rb'
 end
 
+desc 'Send a Text to random Student'
+task "db:text" do
+  puts "Sending Cat Fact Text!"
+  exec 'ruby ./app/controller/cat_fact_texter.rb'
+end
+
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:specs)
 
