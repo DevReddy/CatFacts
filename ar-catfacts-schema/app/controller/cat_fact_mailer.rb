@@ -5,7 +5,7 @@ options = { :address              => "smtp.gmail.com",
             :port                 => 587,
             :domain               => 'your.host.name',
             :user_name            => 'catfactsarethebestest',
-            :password             => 'catfacts123',
+            :password             => '',
             :authentication       => 'plain',
             :enable_starttls_auto => true  }
 
@@ -55,5 +55,5 @@ Catfact.count.times do
 
   end
 
-  sleep(7)
+  # sleep(7)
 end

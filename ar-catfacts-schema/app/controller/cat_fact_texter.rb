@@ -5,8 +5,8 @@ require 'twilio-ruby'
 text = TextParser.parse_txt('./app/models/student_numbers.txt')
 numbers = TextParser.convert_to_array_of_arrays(text)
 
-account_sid = 'AC90434a67ef1e41b8c69308b4d0ae7098'
-auth_token = '1242572856dbaca3a0faf7418f8cd902'
+account_sid = ''
+auth_token = ''
 
 @client = Twilio::REST::Client.new account_sid, auth_token
 
