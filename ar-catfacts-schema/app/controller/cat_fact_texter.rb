@@ -34,5 +34,5 @@ Catfact.count.times do
                                      :from => "+14154668666",
                                      :body => body + cat_fact})
 
-  sleep(7)
+  # sleep(7)
 end
